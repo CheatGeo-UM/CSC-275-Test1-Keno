@@ -3,6 +3,7 @@
 #include <algorithm>
 #include "Player.h"
 
+//The Player.cpp is encapsulation of all the code needed for the player portions of the Game to run.
 void Player::inputPlayerNumbers() {
     int temp = 0;
     for (int i=0;i<10;i++){

@@ -3,15 +3,21 @@
 #include <vector>
 #include "Game.h"
 
-Game::Game() {
-    m_keno;
-    m_player;
-    m_matches;
-    playGame();
+Game::Game() { //This is abstraction for the class Game and the code below that and in other parts of the program.
+    m_keno; //These three (m_keno, m_player and m_matches don't seen to be necessary here,
+    m_player; // but leaving them in doesn't seem to adversely affect the program either.
+    m_matches; // I have tested it with and without them, but ultimately decided to leave them in.
+
+    playGame(); // This is what allows the entire program to run, using the .cpps and headers of all the
+                // other parts (KenoNumbers and Player).
+                // I am pretty sure this is both encapsulation and abstraction.
+
+    //Neither of the two commented code below helped and actually caused errors at the end of the program running.
     //printMatches(m_player.getPlayerNumbers(), m_keno.getKenoNumbers());
     //displayResults();
+    //I decided to comment them out, rather than erase them, in case there was a use for them I missed or needed later.
 }
-
+// Abstraction
 void Game::printMatches(std::vector<int> playerPicks, std::vector<int> kenoNumbers) {
     //This runs through the player picks and generated numbers to compare them.
     //It then puts them into m_matches vector.
@@ -31,11 +37,11 @@ void Game::printMatches(std::vector<int> playerPicks, std::vector<int> kenoNumbe
             std::cout << i << " ";
         }
     }
-    else {
+    else { //I added this message in when no numbers where matched. It looked very empty and felt like there was less feedback to the user.
         std::cout << "None of the numbers.";
     }
 }
-
+// Abstraction
 void Game::displayResults() {
     m_keno.printKenoNumbers();
     m_player.printPlayerNumbers();
@@ -69,7 +75,7 @@ void Game::displayResults() {
         std::cout << "\n$0. Sorry, you didn't have enough matches.";
     }
 }
-
+// Abstraction and Encapsulation
 void Game::playGame() {
         char again = 'y';
         do {

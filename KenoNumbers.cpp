@@ -3,6 +3,7 @@
 #include <algorithm>
 #include "KenoNumbers.h"
 
+//The entire KenoNumbers.cpp is an encapsulation the KenoNumbers.h, which is usable to make parts of Game.cpp run.
 void KenoNumbers::generateNumbers() {
     std::random_device rd;
     std::mt19937 gen(rd());

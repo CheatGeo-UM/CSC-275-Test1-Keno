@@ -4,7 +4,7 @@
 #include "KenoNumbers.h"
 #include "Player.h"
 
-
+// This entire Game header is an example of abstraction.
 class Game {
 private:
     KenoNumbers m_keno;

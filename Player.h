@@ -2,7 +2,7 @@
 #define CSC_275_TEST1_KENO_PLAYER_H
 #include <vector>
 
-
+// This entire Player header is an example of abstraction.
 class Player {
 private:
     std::vector<int> m_playerNumbers;
